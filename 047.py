@@ -3,6 +3,8 @@
 
 Considere que o caixa possui cédulas de R$50, R$20, R$10 e R$1"""
 import os
+
+
 def caixa_eletronico():
     while True:
         try:
@@ -15,7 +17,6 @@ def caixa_eletronico():
 
             cedulas_50 = cedulas_20 = cedulas_10 = cedulas_1 = 0
 
-        
             cedulas_50 = valor_saque // 50
             valor_saque %= 50
 
@@ -27,14 +28,14 @@ def caixa_eletronico():
 
             cedulas_1 = valor_saque
 
-            
             print(f"\nCédulas de R$50: {cedulas_50}")
             print(f"Cédulas de R$20: {cedulas_20}")
             print(f"Cédulas de R$10: {cedulas_10}")
             print(f"Cédulas de R$1: {cedulas_1}")
-            
+
         except ValueError:
             os.system("cls")
             print("Valor inválido!")
+
 
 caixa_eletronico()
