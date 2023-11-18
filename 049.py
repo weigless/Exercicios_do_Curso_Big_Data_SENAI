@@ -4,10 +4,12 @@ def area(a,b):
     area=a*b
     return area
 
-try:
-    largura= float(input("Digite a largura do terreno em m: "))
-    comprimento= float(input("Digite o comprimento do terreno em m: "))
-    print(f"Área total do terreno: {area(largura,comprimento)} m2")
+while True:
+    try:
+        largura= float(input("Digite a largura do terreno em m: "))
+        comprimento= float(input("Digite o comprimento do terreno em m: "))
+        print(f"Área total do terreno: {area(largura,comprimento)} m²")
+        break
 
-except ValueError:
-    print("Digite um valor válido.")
+    except ValueError:
+        print("Digite um valor válido.")
