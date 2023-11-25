@@ -33,7 +33,7 @@ if altura >= 1.5 and altura <=2:
 elif altura >2:
     print("Você vai bater a cabeça! Está proibido.")
 else:
-    print("Você é muito pequeno, quem sabe ano que vem.")'''
+    print("Você é muito pequeno, quem sabe ano que vem.")
 
 #TUPLAS
 
@@ -48,6 +48,31 @@ for count in range(0, len(carro)):
 
 for pos, carac in enumerate(carro):
    print(f'Ordem de compra {carac} Cod: {pos}')
+
+#LISTAS
+
+carro = ['Ferrari', 'Vermelha', '2023']
+carro [1] = 'Amarelo'
+print(carro)
+
+carro.append('Gasolina')     # cria no final da lista
+print(carro)
+
+carro.insert(1, '797 cv ')   # insere na posição 1
+print(carro)
+
+carro.pop(1)                 # remove o item na posição 1
+print(carro)
+
+carro.remove('Amarelo')     # remove o valor 'amarelo'
+print(carro)
+
+print(len(carro))                 # retorna o tamanho da lista'''
+
+idades = [2,5,66,7,54,6,7,10]
+print(min(idades))
+print(max(idades))
+print(sum(idades))
 
 
 
