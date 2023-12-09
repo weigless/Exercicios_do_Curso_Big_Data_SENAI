@@ -67,12 +67,25 @@ print(carro)
 carro.remove('Amarelo')     # remove o valor 'amarelo'
 print(carro)
 
-print(len(carro))                 # retorna o tamanho da lista'''
+print(len(carro))                 # retorna o tamanho da lista
 
 idades = [2,5,66,7,54,6,7,10]
 print(min(idades))
 print(max(idades))
-print(sum(idades))
+print(sum(idades))'''
+
+Aluno = list()           # Lista principal
+dados = list()           # Lista secundária
+
+
+for c in range(0, 3):
+   dados.append(str(input('Nome: ')))  # Coleta de dados LS
+   dados.append(int(input('Idade: ')))
+   Aluno.append(dados[:]) #Inserção da cópia na LP
+   dados.clear()
+
+print(Aluno)
+
 
 
 
