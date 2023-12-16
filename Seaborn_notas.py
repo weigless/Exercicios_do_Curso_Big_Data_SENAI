@@ -7,7 +7,7 @@ gorjeta = sns.load_dataset('tips') #importação de dados
 
 print(gorjeta.head()) #mostra o início
 
-'''#Plotagem de distribuição univariada (Histogramas)
+#Plotagem de distribuição univariada (Histogramas)
 
 sns.histplot(gorjeta['total_bill'], kde=True, bins = 30)
 
@@ -23,7 +23,7 @@ sns.jointplot(x= 'total_bill', y= 'tip', data=gorjeta, kind= 'reg')
 sns.pairplot(gorjeta)
 
 #seleção combinada (ex: separando pelo sexo)
-sns.pairplot(gorjeta, hue='sex')'''
+sns.pairplot(gorjeta, hue='sex')
 
 #Plotagem de categorias (gráfico de barras)
 sns.barplot(x='sex', y='total_bill', data=gorjeta)
@@ -31,6 +31,32 @@ sns.barplot(x='sex', y='total_bill', data=gorjeta, estimator=np.std)
 
 sns.countplot(x='sex', data=gorjeta)
 
+#Diagrama de Caixas
+sns.boxplot(x= 'day', y= 'total_bill', data= gorjeta)
+sns.boxplot(x='day', y='total_bill', data=gorjeta, hue= 'smoker')
+
+#Diagrama de Violino
+sns.violinplot(x='day', y='total_bill', data=gorjeta)
+sns.violinplot(x='day', y='total_bill', data=gorjeta, hue='sex', split=True)
+
+#Gráfico de Enxame
+sns.swarmplot(x='day', y='total_bill', data= gorjeta)
+
+#Coringa
+sns.catplot(x='day', y='total_bill', data= gorjeta, kind='bar')
 
 #Exibir o gráfico
+plt.show()
+
+#Importação
+voos= sns.load_dataset('flights')
+
+print(voos.head())
+
+#Mapa de Calor
+vp= voos.pivot_table(index='month', columns='year', values='passengers')
+sns.heatmap(vp, cmap='magma')
+
+#Mapa de cluster
+sns.clustermap(vp, cmap='coolwarm', standard_scale=1)
 plt.show()
